@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+
+<img src="https://img1.baidu.com/it/u=4049022245,514596079&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500"/>
+
+<meta charset="utf-8">
+<script type="text/javascript">
+    function my_print()
+    {
+        //直接调用浏览器打印功能
+        bdhtml=window.document.body.innerHTML;
+        //定义打印区域起始字符，根据这个截取网页局部内容
+        sprnstr="<!--startprint-->"; //打印区域开始的标记
+        eprnstr="<!--endprint-->";   //打印区域结束的标记
+        prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+        prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+        //还原网页内容
+        window.document.body.innerHTML=prnhtml;
+        //开始打印
+        window.print();
+    }
+    function img11() {
+
+        var img11 = new SimpleImage(200, 200);
+        for (var px of img.values()) {
+            var x = px.getX();
+            var y = px.getY();
+            if (x < img.getWidth() / 2) {
+                px.setBlue(255);
+            } else {
+                if (y < img.getHeight() / 2) {
+                    px.setGreen(255);
+                }
+            }
+        }
+        return img11;
+        print(img11);
+    }
+    function alart11(){
+        alert("11111")
+    }
+
+    img11();
+
+
+
+
+</script>
+<body>
+<a href="#" onClick="alart11()" ><span> 打  印</span></a><br>
+<!--startprint-->
+<img src=img11.img11 style="height: 200px;width:200px"/>
+
+img11();
+
+<!--endprint-->
+</body>
+</html>

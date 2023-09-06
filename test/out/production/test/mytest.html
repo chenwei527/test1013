@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<p>内联JavaScript脚本</p>
+<script type="text/javascript">
+    alert("Hello");
+    var img = new SimpleImage(200,200);
+    for (var px of img.values()){
+        var x = px.getX();
+        var y = px.getY();
+        if (x < img.getWidth()/2){
+            px.setBlue(255);
+        }
+        else {
+            if (y < img.getHeight()/2){
+                px.setGreen(255);
+            }
+        }
+    }
+    print (img);
+
+
+</script>
+</body>
+</html>
